@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact List API</title>
+  
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+  <script src="/javascript/application.js"></script>
+
+</head>
+<body>
+  <div id="get-contacts">All contacts
+  </div>
+
+  <h2>New contact</h2>
+  <form id="new-contact" action="/contacts" method="post">
+    <p><strong>First Name:</strong></p>
+    <input id="new-first_name" name="first_name" type="text">
+
+    <p><strong>Last Name:</strong></p>
+    <input id="new-last_name" name="last_name" type="text">
+
+    <p><strong>Email:</strong></p>
+    <textarea id="new-email" name="email"></textarea>
+
+    <p><strong>Phone Number:</strong></p>
+    <input id="new-phone_number" name="phone_number" type="text">
+
+    <p><input id="new-submit" type="submit"></p>
+  </form>
+
+</body>
+</html>
