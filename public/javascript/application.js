@@ -7,15 +7,21 @@ $(document).ready(function() {
 
 });
 
-  $('#new-submit').click(function () {
+  $('#new-contact').on("submit",function (event) {
+    console.log("hi");
+    event.preventDefault();
     // Get the data from the form elements
-    var form = $("form#new-contact")
+    var form = $("form#new-contact");
     var data = form.serialize();
     $.ajax({
       url: '/contacts',
       method: 'POST',
       data: data,
-      dataType:"json"
+      dataType:"json",
+      success:function(results){
+        console.log(results);
+        $('#get-contacts').append("<p>" + results.first_name +" "+ results.last_name+" "+results.email+" " +"</p>");
+      }
     })
     
   });

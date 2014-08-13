@@ -19,7 +19,6 @@ post '/contacts' do
     if contact.save
       contact.to_json
     end
-    redirect '/'
 end
 
 # get '/contacts' do
